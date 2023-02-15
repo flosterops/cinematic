@@ -1,0 +1,41 @@
+<div class="w-100">
+  <mat-card
+    class="d-flex flex-row w-100 justify-content-between align-items-center px-4 py-2 card"
+  >
+    <div>
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Name: {{ show.Movie.name }}</mat-card-title>
+
+          <mat-card-subtitle>Date: {{ getFormattedDate() }}</mat-card-subtitle>
+
+          <mat-card-subtitle>Time: {{ getFormattedTime() }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-card-subtitle
+          >Description: {{ show.Movie.description }}</mat-card-subtitle
+        >
+      </mat-card-content>
+
+      <mat-card-footer class="d-flex align-items-center px-3 py-2 gap-2">
+        <mat-card-title>Price: {{ show.price }}€</mat-card-title>
+
+        <mat-card-actions>
+          <button
+            (click)="
+              onPurchase({ theaterId: show.Theater.id, showId: show.id })
+            "
+            mat-flat-button
+            color="primary"
+          >
+            Purchase
+          </button>
+        </mat-card-actions>
+      </mat-card-footer>
+    </div>
+
+    <img mat-card-lg-image src="assets/movie.png" class="h-100" />
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <app-header title="Home Page"></app-header>
+  <mat-tab-group>
+    <mat-tab label="Recently ongoing">
+      <app-show-list
+        (purchase)="openPurchaseDialog($event)"
+        [shows]="shows"
+      ></app-show-list>
+    </mat-tab>
+
+    <mat-tab label="Ongoing Movies">
+      <app-movie-list [movies]="movies"></app-movie-list>
+    </mat-tab>
+
+    <mat-tab label="Our Theaters">
+      <app-theater-list [theaters]="theaters"></app-theater-list>
+    </mat-tab>
+  </mat-tab-group>
+
+  <button
+    (click)="openMyTicketDialog()"
+    class="my-ticket"
+    mat-flat-button
+    color="primary"
+  >
+    My tickets
+  </button>
+</div>

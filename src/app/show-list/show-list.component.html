@@ -1,0 +1,10 @@
+<div class="p-4 w-100">
+  <div *ngIf="shows.length" class="gap-4 d-flex flex-wrap">
+    <app-show-card
+      *ngFor="let show of shows"
+      [show]="show"
+      (purchase)="onPurchase($event)"
+      class="d-flex flex-grow-1"
+    ></app-show-card>
+  </div>
+</div>

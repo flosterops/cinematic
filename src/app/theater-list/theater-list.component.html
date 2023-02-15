@@ -1,0 +1,9 @@
+<div class="p-4 w-100">
+  <div *ngIf="theaters.length" class="d-flex flex-wrap gap-4">
+    <app-theater-card
+      *ngFor="let theater of theaters"
+      [theater]="theater"
+      class="d-flex flex-grow-1"
+    ></app-theater-card>
+  </div>
+</div>

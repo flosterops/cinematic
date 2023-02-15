@@ -1,0 +1,9 @@
+<div
+  class="p-4 d-flex flex-column justify-content-center align-items-center gap-3"
+>
+  <div class="d-flex justify-content-center align-items-center w-100">
+    <p>QR Code your ticket</p>
+  </div>
+  <img [src]="data.src" alt="QR-code" />
+  <button mat-flat-button color="primary" (click)="closeDialog()">Close</button>
+</div>

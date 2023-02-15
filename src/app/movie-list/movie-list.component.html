@@ -1,0 +1,9 @@
+<div class="p-4 w-100">
+  <div *ngIf="movies.length" class="gap-4 d-flex flex-wrap">
+    <app-movie-card
+      *ngFor="let movie of movies"
+      [movie]="movie"
+      class="d-flex flex-grow-1"
+    ></app-movie-card>
+  </div>
+</div>
