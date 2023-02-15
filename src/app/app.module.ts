@@ -34,6 +34,10 @@ import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.compo
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 import { TicketCardComponent } from './ticket-card/ticket-card.component';
 import { QrCodeComponent } from './qr-code/qr-code.component';
+import { RatingFormComponent } from './rating-form/rating-form.component';
+import { RatingListComponent } from './rating-list/rating-list.component';
+import { RatingDialogComponent } from './rating-dialog/rating-dialog.component';
+import { ReviewCardComponent } from './review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,10 @@ import { QrCodeComponent } from './qr-code/qr-code.component';
     TicketDialogComponent,
     TicketCardComponent,
     QrCodeComponent,
+    RatingFormComponent,
+    RatingListComponent,
+    RatingDialogComponent,
+    ReviewCardComponent,
   ],
   imports: [
     BrowserModule,

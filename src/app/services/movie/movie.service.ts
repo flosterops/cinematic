@@ -12,8 +12,14 @@ export class MovieService {
     return this.http.get(`${BASE_URL}/movie`, { headers: getAuthHeaders() });
   }
 
-  getMovie(id: string) {
+  getMovie(id: number) {
     return this.http.get(`${BASE_URL}/movie/get/${id}`, {
+      headers: getAuthHeaders(),
+    });
+  }
+
+  getRating(id: number) {
+    return this.http.get(`${BASE_URL}/rating/get-movie-rating/${id}`, {
       headers: getAuthHeaders(),
     });
   }

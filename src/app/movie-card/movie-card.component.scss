@@ -3,3 +3,11 @@
     display: none !important;
   }
 }
+
+.movie-card__rating {
+  color: #3f51b5 !important;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}

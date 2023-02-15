@@ -9,11 +9,18 @@
         </mat-card-title-group>
       </mat-card-header>
       <mat-card-content>
-        <mat-card-subtitle
-          >Description: {{ movie.description }}</mat-card-subtitle
-        >
+        <mat-card-subtitle>
+          Description: {{ movie.description }}
+        </mat-card-subtitle>
 
         <mat-card-subtitle>Min age: {{ movie.age }}</mat-card-subtitle>
+
+        <mat-card-subtitle
+          (click)="openReviewDialog()"
+          class="movie-card__rating"
+        >
+          Rating: {{ rating }}
+        </mat-card-subtitle>
       </mat-card-content>
     </div>
 

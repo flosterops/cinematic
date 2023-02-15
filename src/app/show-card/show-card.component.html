@@ -14,9 +14,16 @@
       </mat-card-header>
 
       <mat-card-content>
+        <mat-card-subtitle>
+          Description: {{ show.Movie.description }}
+        </mat-card-subtitle>
+
         <mat-card-subtitle
-          >Description: {{ show.Movie.description }}</mat-card-subtitle
+          class="show-card__rating"
+          (click)="openRatingDialog()"
         >
+          Rating: {{ rating }}
+        </mat-card-subtitle>
       </mat-card-content>
 
       <mat-card-footer class="d-flex align-items-center px-3 py-2 gap-2">

@@ -24,4 +24,15 @@ export class CustomerService {
       headers: getAuthHeaders(),
     });
   }
+
+  addReviewToMovie(
+    movieId: number,
+    { stars, review }: { stars: number; review: string }
+  ) {
+    return this.http.post(
+      `${BASE_URL}/rating/add-review/${movieId}`,
+      { stars, review },
+      { headers: getAuthHeaders() }
+    );
+  }
 }
